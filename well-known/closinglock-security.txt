@@ -1,0 +1,5 @@
+Canonical: https://closinglock.com/.well-known/security.txt
+Contact: mailto:security@closinglock.com
+Expires: 2025-12-31T23:59:00Z
+Hiring: https://ats.rippling.com/closinglock/jobs
+Preferred-Languages: en

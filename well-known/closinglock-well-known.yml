@@ -1,0 +1,103 @@
+generated: '2026-08-09'
+method: probed
+source: live probes of https://www.closinglock.com, https://closinglock.com, https://portal.closinglock.com, https://trust.closinglock.com
+notes: >-
+  www.closinglock.com is a WordPress site whose nginx origin returns a real 404 for unknown
+  /.well-known/* paths (control probe /.well-known/kinlane-control-xyz.txt -> 404 nginx), so the
+  200 text/plain security.txt below is a genuine document and not a soft-404. The two OAuth/OIDC
+  documents served from trust.closinglock.com are SafeBase's own vendor metadata (issuer
+  app.safebase.io) exposed under Closinglock's custom trust-center domain — they do NOT describe a
+  Closinglock authorization server and are recorded here for provenance only.
+hosts:
+  - host: www.closinglock.com
+    control_probe:
+      path: /.well-known/kinlane-control-xyz.txt
+      status: 404
+      note: real 404 (nginx) — confirms this host does not soft-404 well-known paths
+  - host: closinglock.com
+    note: Laravel application host (login + customer portal); /api/* routes exist but are authenticated
+  - host: portal.closinglock.com
+    note: Closinglock-branded application host; returns a branded 404 at root
+  - host: trust.closinglock.com
+    note: SafeBase custom trust-center domain; root returns 404 (no published trust center)
+paths:
+  - path: /.well-known/security.txt
+    host: www.closinglock.com
+    status: 200
+    content_type: text/plain; charset=utf-8
+    file: well-known/closinglock-security.txt
+    verified: true
+  - path: /.well-known/security.txt
+    host: portal.closinglock.com
+    status: 200
+    content_type: text/plain; charset=utf-8
+    note: identical body to www; canonical points at https://closinglock.com/.well-known/security.txt
+  - path: /.well-known/security.txt
+    host: trust.closinglock.com
+    status: 200
+    content_type: text/plain; charset=utf-8
+    note: identical body to www
+  - path: /.well-known/openid-configuration
+    host: trust.closinglock.com
+    status: 200
+    content_type: application/json
+    file: well-known/closinglock-openid-configuration.json
+    vendor: SafeBase
+    issuer: https://app.safebase.io/api/mcp
+    note: SafeBase MCP authorization-server metadata, not a Closinglock identity provider
+  - path: /.well-known/oauth-protected-resource
+    host: trust.closinglock.com
+    status: 200
+    content_type: application/json
+    file: well-known/closinglock-oauth-protected-resource.json
+    vendor: SafeBase
+    resource: https://app.safebase.io/api/mcp
+    note: SafeBase MCP protected-resource metadata, not a Closinglock API
+  - path: /.well-known/oauth-authorization-server
+    host: trust.closinglock.com
+    status: 200
+    content_type: application/json
+    vendor: SafeBase
+    note: same SafeBase document as /.well-known/openid-configuration
+  - path: /.well-known/openid-configuration
+    host: www.closinglock.com
+    status: 200
+    content_type: text/html
+    verified: false
+    note: WordPress catch-all HTML page, not an OIDC document — rejected
+  - path: /.well-known/api-catalog
+    host: www.closinglock.com
+    status: 200
+    content_type: text/html
+    verified: false
+    note: WordPress catch-all HTML page, not an RFC 9727 catalog — rejected
+  - path: /.well-known/ai-plugin.json
+    host: www.closinglock.com
+    status: 200
+    content_type: text/html
+    verified: false
+    note: WordPress catch-all HTML page — rejected
+  - path: /.well-known/agent-card.json
+    host: www.closinglock.com
+    status: 200
+    content_type: text/html
+    verified: false
+    note: WordPress catch-all HTML page, not an A2A AgentCard — rejected
+  - path: /.well-known/agent.json
+    host: www.closinglock.com
+    status: 200
+    content_type: text/html
+    verified: false
+    note: WordPress catch-all HTML page, not an A2A AgentCard — rejected
+  - path: /.well-known/oauth-authorization-server
+    host: portal.closinglock.com
+    status: 404
+  - path: /.well-known/api-catalog
+    host: portal.closinglock.com
+    status: 404
+  - path: /llms.txt
+    host: www.closinglock.com
+    status: 404
+  - path: /llms-full.txt
+    host: www.closinglock.com
+    status: 404

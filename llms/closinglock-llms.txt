@@ -1,0 +1,76 @@
+# Closinglock
+
+> Closinglock is an Austin, Texas fintech and fraud-prevention company whose platform secures the
+> money movement and identity checks inside a residential real estate closing. Title companies,
+> real estate attorneys, agents and underwriters use it to share wire instructions over an
+> authenticated channel instead of email, verify identity and bank-account ownership before funds
+> move, collect and disburse funds, retrieve mortgage payoff statements, manage and e-sign closing
+> documents, and evidence FinCEN and ALTA Best Practices obligations.
+
+<!--
+generated: 2026-08-09
+method: generated
+source: apis.yml + repo artifacts (no /llms.txt is published on any Closinglock host; probed
+        https://www.closinglock.com/llms.txt -> 404 and https://www.closinglock.com/llms-full.txt -> 404)
+maintainer: API Evangelist (https://apievangelist.com) — third-party profile, not published by Closinglock
+-->
+
+## Important for agents
+
+Closinglock publishes **no public API**. As of 2026-08-09 there is no developer portal, no API
+reference, no OpenAPI/AsyncAPI/GraphQL document, no SDK on any public package registry, no CLI,
+no MCP server, and no A2A agent card on any Closinglock host. The subdomains `api.`, `docs.`,
+`developer.` and `developers.closinglock.com` do not resolve. Integrations with the title
+production systems (SoftPro, RamQuest, ResWare) and with DocuSign are built bilaterally with each
+vendor rather than through a self-serve API program. Do not attempt to construct Closinglock API
+calls — there is no published contract to ground them in.
+
+## Product surface (marketing pages, human-readable)
+
+- [Platform overview](https://www.closinglock.com/platform-page/): the combined closing platform.
+- [Secure Wire Instructions](https://www.closinglock.com/wire-instructions/): authenticated delivery of wire instructions in place of email.
+- [SecurePay digital payments](https://www.closinglock.com/securepay/): collection and disbursement of closing funds.
+- [Identity Verification](https://www.closinglock.com/identity-verification/): identity and bank-account ownership checks on parties to a file.
+- [Automated Payoff Retrieval](https://www.closinglock.com/payoff-retrieval/): retrieval and verification of mortgage payoff statements.
+- [Document Management & eSigning](https://www.closinglock.com/document-management/): closing document handling and signature.
+- [Two-Way Text Messaging](https://www.closinglock.com/two-way-texting/): messaging with buyers and sellers on a file.
+- [FinCEN Compliance](https://www.closinglock.com/fincen-compliance/): anti-money-laundering reporting support.
+- [Secure platform](https://www.closinglock.com/secure-platform/): the security narrative, including ALTA Best Practices support.
+
+## Audiences
+
+- [Title Companies](https://www.closinglock.com/title-companies/)
+- [Attorneys](https://www.closinglock.com/attorneys/)
+- [Real Estate Agents](https://www.closinglock.com/real-estate-agents/)
+- [Buyers & Sellers](https://www.closinglock.com/buyers-sellers/)
+- [Underwriters](https://www.closinglock.com/underwriters/)
+
+## Access
+
+- [Log in](https://closinglock.com/login): the customer application. Access is by invitation from a title company or attorney; there is no self-serve signup.
+- [Request a demo](https://www.closinglock.com/request-a-demo/): the only published route to an account.
+- [Partnerships](https://www.closinglock.com/partnerships/): underwriter and title partner listings.
+- [Contact](https://www.closinglock.com/contact/): general support and sales contact.
+
+## Security and compliance
+
+- [security.txt](https://www.closinglock.com/.well-known/security.txt): security contact is security@closinglock.com. Note the file's Expires field (2025-12-31) has passed, and it carries no Policy field.
+- [SOC 2 Type II announcement (2023-08-22)](https://www.closinglock.com/closinglock-announces-soc2-type2-certification/): AICPA/SSAE 18 audit; auditor and audit period are not named.
+- `trust.closinglock.com` is wired to SafeBase but the trust center itself is not published (root returns 404).
+- Transport posture probed 2026-08-09: TLS 1.3, HSTS `max-age=15552000`, DNSSEC signed, SPF present, DMARC `p=reject`, no CAA records.
+
+## Company
+
+- [About](https://www.closinglock.com/about-us/)
+- [Newsroom](https://www.closinglock.com/newsroom/)
+- [Blog](https://www.closinglock.com/blog/) — RSS: https://www.closinglock.com/feed/
+- [Webinars](https://www.closinglock.com/webinars/)
+- [Careers](https://www.closinglock.com/careers/)
+- [Legal / Terms](https://www.closinglock.com/legal/)
+- [Privacy Policy](https://www.closinglock.com/privacy-policy/)
+- Funding: $34M Series B led by Sageview Capital, announced January 2025.
+
+## Optional
+
+- [Closinglock on Forge Global](https://forgeglobal.com/closinglock_stock/): secondary-market listing (third-party).
+- [API Evangelist profile](https://apis.io/closinglock/): the independent third-party profile this file was generated from.
