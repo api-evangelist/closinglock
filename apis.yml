@@ -44,12 +44,12 @@ specificationVersion: '0.23'
 created: '2026-08-09'
 modified: '2026-08-09'
 tags:
-- Real-Estate
+- Real Estate
 - Title Insurance
 - Fraud Prevention
 - Payments
 - Identity Verification
-- Document-Management
+- Document Management
 - Fintech
 - Compliance
 - Security
@@ -65,6 +65,8 @@ tags_raw:
 - Compliance
 - Security
 - Company
+- Real-Estate
+- Document-Management
 apis: []
 maintainers:
 - FN: Kin Lane
