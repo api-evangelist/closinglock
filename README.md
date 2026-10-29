@@ -64,5 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Closinglock is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/closinglock_stock/
+Closinglock is an Austin, Texas fintech and fraud-prevention company whose platform secures the money movement and identity checks inside a residential real estate closing. Title companies, real estate attorneys, agents, underwriters and their buyers and sellers use it to share wire instructions over an authenticated channel instead of email, verify identity and bank-account ownership before funds move, collect and disburse funds through SecurePay digital payments, retrieve and verify mortgage payoff statements, manage and e-sign closing documents, run two-way text messaging with the parties to a file, and evidence FinCEN and ALTA Best Practices obligations. The company announced SOC 2 Type II certification in August 2023 and raised a $34M Series B led by Sageview Capital in January 2025. Closinglock ships integrations into the major title production systems — SoftPro, RamQuest and ResWare — plus a DocuSign e-signature partnership, but those integrations are built bilaterally with each vendor: as of this profile Closinglock publishes no public developer portal, API reference, or machine-readable contract.
+
+**Areas:** Real Estate · Title Insurance · Fraud Prevention · Payments · Identity Verification · Document Management · Fintech · Compliance · Security · Company
+
+## Closinglock on APIs.io
+
+Everything profiled for Closinglock is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/closinglock/](https://apis.io/providers/closinglock/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Closinglock Domain Security](https://apis.io/security/closinglock/closinglock-domain-security/)
+- [Closinglock Vulnerability Disclosure](https://apis.io/security/closinglock/closinglock-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.closinglock.com/)
+- [Sign up](https://closinglock.com/login)
+- [Support](https://www.closinglock.com/contact/)
+- [Blog](https://www.closinglock.com/blog/)
+- [Terms of service](https://www.closinglock.com/legal/)
+- [Privacy policy](https://www.closinglock.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 12.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.3** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/closinglock/](https://apis.io/providers/closinglock/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Closinglock: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/closinglock/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
